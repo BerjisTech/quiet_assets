@@ -29,7 +29,7 @@ module QuietAssets
             Rails.logger.level = env[KEY] if env[KEY]
           end
         end
-        alias_method_chain :call, :quiet_assets
+        alias_method :quiet_assets, :call
       end
     end
   end
